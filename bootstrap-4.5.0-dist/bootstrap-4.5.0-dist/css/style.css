@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 19px;
+}
+header {
+    background-color: khaki;
+    background-image: linear-gradient(to right,rgb(255, 255, 116), khaki  ); 
+    /* background-image: linear-gradient(to top, #dfe9f3 0%, white 100%); */
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}  
+
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.7em;
+    letter-spacing: 1px;
+}
+.navbar-nav a {
+    transition:  all 0.3s;
+    margin: 10px;
+}
+.navbar-nav a:hover{
+    position: relative;
+    width: 60%;
+    height: 45px;
+    border-bottom: 2px solid green;
+  
+}
+.icon {
+    width: 500px;
+    height: 450px; 
+    position: absolute;
+    top: 10%;
+    left: 55%;
+} 
+.icon  img {
+    width: 100%;
+    height: 100%;
+}
+
+/* CONTENT */
+section {
+    height: 100vh;
+}
+.content {
+    margin-top: 80px;
+    margin-left: 20px;
+    width: 500px;
+  
+}
+
+.content h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.content .btn {
+    background-color: rgb(20, 163, 56);
+    margin-top: 10px;
+   
+    
+}
+.content .btn:hover{
+    background-color: rgb(13, 221, 65);
+    
+}
+/* wave */
+.wave {
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    animation: animate 5s linier infinite;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+}
+
+@keyframes animate {
+    0%,100%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* JUMBOTRON */
+
+.jumbotron {
+     background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+     position: relative;
+     background-color: rgb(31, 216, 248);
+  
+     
+     
+}
+
+.jumbotron h1 {
+    font-size: 2em;
+}
+.jumbotron h1::after {
+    content: '';
+    width: 500px;
+    height: 2px;
+    background-color: black;
+    color: black;
+    display: block;
+    margin-top: 5px;
+}
+.jumbotron ul, li{
+    margin-left: 20px;
+}
+
+/* card */
+
+.cars {
+    padding-top: 20px;
+    background-color: rgb(253, 235, 201);
+    position: relative;
+    overflow: hidden;
+}
+.col-md-3 {
+    margin-right: 50px;
+    height: 600px;
+      
+}
+.card {
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);     
+}
+.card h5::after {
+    content: '';
+    margin-top: 8px;
+    width: 100%;
+    height: 1px;
+    display: block;
+    background-color: rgb(54, 52, 52);
+    position: absolute;
+    left: 0;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+
