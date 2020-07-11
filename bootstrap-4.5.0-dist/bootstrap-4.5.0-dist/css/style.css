@@ -5,15 +5,39 @@
     font-size: 19px;
 }
 header {
-    background-color: khaki;
+   
     background-image: linear-gradient(to right,rgb(255, 255, 116), khaki  ); 
     /* background-image: linear-gradient(to top, #dfe9f3 0%, white 100%); */
     height: 100vh;
-    position: relative;
-    overflow: hidden;
-}  
+   
+} 
 
-
+.container {
+    width: 80%;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 100px;
+    z-index: 999;
+    transition: 0.5s;
+    background-image: linear-gradient(to right,rgb(255, 255, 116), khaki  ); 
+}
+.home,.syarat,.contentent,.cars{
+    transition:  all 0.5s;
+}
+.navbar.sticky {
+    padding: 5px 100px;
+    /* background-image: linear-gradient(to right,rgb(255, 255, 116), khaki  );  */
+    background: papayawhip;
+}
 .navbar-brand {
     font-weight: 600;
     font-size: 1.7em;
@@ -42,12 +66,13 @@ header {
     height: 100%;
 }
 
-/* CONTENT */
+
+/* =============================CONTENT==================================== */
 section {
     height: 100vh;
 }
 .content {
-    margin-top: 80px;
+    padding-top: 200px;
     margin-left: 20px;
     width: 500px;
   
@@ -68,7 +93,7 @@ section {
     background-color: rgb(13, 221, 65);
     
 }
-/* wave */
+/* =====================wave=================*/
 .wave {
     position: absolute;
     bottom: -10%;
@@ -86,45 +111,16 @@ section {
     }
 }
 
-/* JUMBOTRON */
-
-.jumbotron {
-     background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
-     position: relative;
-     background-color: rgb(31, 216, 248);
-  
-     
-     
-}
-
-.jumbotron h1 {
-    font-size: 2em;
-}
-.jumbotron h1::after {
-    content: '';
-    width: 500px;
-    height: 2px;
-    background-color: black;
-    color: black;
-    display: block;
-    margin-top: 5px;
-}
-.jumbotron ul, li{
-    margin-left: 20px;
-}
-
-/* card */
-
+/*=============================card=============================== */
 .cars {
-    padding-top: 20px;
+    padding-top: 70px;
     background-color: rgb(253, 235, 201);
-    position: relative;
-    overflow: hidden;
+    position: relative; 
+    height: 110vh;
 }
 .col-md-3 {
-    margin-right: 50px;
-    height: 600px;
-      
+    margin-right: 50px;   
+    
 }
 .card {
     box-shadow: 2px 2px 5px rgba(0,0,0,0.5);     
@@ -143,7 +139,42 @@ section {
 
 
 
+/* ===============================JUMBOTRON=====================================*/
 
+.jumbotron {
+    background-image: linear-gradient(to right,rgb(255, 255, 116), khaki  ); 
+    /* background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%); */
+     position: relative;
+     /* background-color: rgb(31, 216, 248);   */
+     
+}
 
+.jumbotron h1 {
+    font-size: 2em;
+    padding-top: 50px;
+}
+.jumbotron h1::after {
+    content: '';
+    width: 500px;
+    height: 2px;
+    background-color: black;
+    color: black;
+    display: block;
+   
+}
+.jumbotron ul, li{
+    margin-left: 20px;
+}
 
+/* contentent */
 
+.contentent {
+    background-color: rgb(253, 235, 201);
+    padding-top: 100px;
+    height: 110vh;
+   
+}
+.col-md-4 img {
+    height: 350px;
+    background-size: cover;
+}
