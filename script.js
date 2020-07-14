@@ -21,7 +21,7 @@ function heroGambarKecil() {
     let screenPosition = window.innerHeight / 1.5;
 
     if (introPort < screenPosition) {
-        nav.classList.add("sticky");
+        nav.classList.toggle("sticky");
     }
 
 }
@@ -39,6 +39,16 @@ window.addEventListener('scroll', heroGambarKecil);
 
 
 
+// on load
+
+const content = document.querySelector(".content");
+
+
+function codeAddress() {
+    content.classList.add('contentMuncul');
+
+}
+window.onload = codeAddress;
 
 
 
@@ -74,41 +84,3 @@ window.addEventListener('scroll', heroGambarKecil);
 
 
 
-
-
-// crs.addEventListener('click', function () {
-//     smootScroll(syarat, 3000);
-// });
-// syarat.addEventListener('click', function () {
-//     smootScroll(crs, 3000);
-// });
-
-// // smootScroll(clickHandler, 2000);
-
-// function smootScroll(target, duration) {
-//     let target = document.querySelector(target);
-//     // let links = document.querySelectorAll(".navbar a");
-//     let targetPosition = links.getBoundingClientRect().top;
-//     let startPosition = window.pageYOffset;
-//     let distance = targetPosition - startPosition;
-//     let startTime = null;
-
-//     function animation(currentTime) {
-//         if (startTime == null) startTime = currentTime;
-
-//         let timeElapsed = currentTime - startTime;
-//         let run = ease(timeElapsed, startPosition, distance, duration);
-//         windiow.scrollTo(0, run);
-
-//         if (timeElapsed < duration) requestAnimationFrame(animation);
-//     }
-//     function ease(t, b, c, d) {
-//         t /= d / 2;
-//         if (t < 1) return c / 2 * t * t * t * t * t + b;
-//         t -= 2;
-//         return c / 2 * (t * t * t * t * t + 2) + b;
-//     }
-
-//     requestAnimationFrame(animation);
-
-// }

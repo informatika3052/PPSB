@@ -12,9 +12,7 @@ header {
    
 } 
 
-.container {
-    width: 80%;
-}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -25,18 +23,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 100px;
-    z-index: 999;
+    padding: 0 120px;
+    z-index: 99999;
     transition: 0.5s;
     background-image: linear-gradient(to right,rgb(255, 255, 116), khaki  ); 
 }
-.home,.syarat,.contentent,.cars{
-    transition:  all 0.5s;
-}
+
 .navbar.sticky {
-    padding: 5px 100px;
+    padding: 0px 120px;
     /* background-image: linear-gradient(to right,rgb(255, 255, 116), khaki  );  */
     background: papayawhip;
+   
 }
 .navbar-brand {
     font-weight: 600;
@@ -68,14 +65,15 @@ header {
 
 
 /* =============================CONTENT==================================== */
-section {
-    height: 100vh;
-}
+
 .content {
-    padding-top: 200px;
-    margin-left: 20px;
+    padding-top: 150px;
     width: 500px;
-  
+    transform: translateX(-600px);
+    transition: all 1.5s;
+}
+.content.contentMuncul {
+    transform: translateX(0);
 }
 
 .content h2 {
@@ -99,7 +97,7 @@ section {
     bottom: -10%;
     left: 0;
     animation: animate 5s linier infinite;
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    
 }
 
 @keyframes animate {
@@ -116,14 +114,27 @@ section {
     padding-top: 70px;
     background-color: rgb(253, 235, 201);
     position: relative; 
-    height: 110vh;
+     
 }
-.col-md-3 {
-    margin-right: 50px;   
-    
+.col-sm-4 {
+    padding-top: 20px;
+    margin-bottom: 30px;
+   
 }
-.card {
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);     
+.card { 
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);    
+    transition: all 1s; 
+}
+.card:hover{
+    transform: scale(1.2);
+}
+.card img {
+    height: 250px;
+    width: 283px;
+    border-radius: 5px;
+}
+.card-2 {
+    transform: translateY(-10px) scale(1.1);
 }
 .card h5::after {
     content: '';
@@ -141,28 +152,30 @@ section {
 
 /* ===============================JUMBOTRON=====================================*/
 
-.jumbotron {
+.jumbo {
     background-image: linear-gradient(to right,rgb(255, 255, 116), khaki  ); 
     /* background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%); */
      position: relative;
-     /* background-color: rgb(31, 216, 248);   */
+    
      
 }
-
-.jumbotron h1 {
-    font-size: 2em;
-    padding-top: 50px;
+.jumbo-mar {
+    padding-top: 80px;
 }
-.jumbotron h1::after {
+.jumbo h1 {
+    font-size: 2em;
+   
+}
+.jumbo h1::after {
     content: '';
-    width: 500px;
+    width: 300px;
     height: 2px;
     background-color: black;
     color: black;
     display: block;
    
 }
-.jumbotron ul, li{
+.jumbo ul, li{
     margin-left: 20px;
 }
 
@@ -171,10 +184,35 @@ section {
 .contentent {
     background-color: rgb(253, 235, 201);
     padding-top: 100px;
-    height: 110vh;
-   
+    
 }
 .col-md-4 img {
     height: 350px;
     background-size: cover;
+}
+
+
+
+/* Responsive */
+@media (min-width: 500px) { 
+
+    .navbar{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .icon{
+        position: relative;
+        display: none;
+    }
+    .card:hover{
+        transform: scale(1);
+    }
+    .content{
+        width: 300px;
+        margin-top: 120px;
+    }
+    
+
 }
