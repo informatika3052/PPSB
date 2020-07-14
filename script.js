@@ -57,8 +57,18 @@ window.onload = codeAddress;
 
 
 
+// Scroll-Top
 
+const scroll = document.querySelector('.scroll-top');
 
+scroll.addEventListener('click', function () {
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    });
+});
 
 
 
