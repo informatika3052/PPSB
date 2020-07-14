@@ -160,7 +160,7 @@ header {
      
 }
 .jumbo-mar {
-    padding-top: 80px;
+    padding-top: 185px;
 }
 .jumbo h1 {
     font-size: 2em;
@@ -194,7 +194,7 @@ header {
 
 
 /* Responsive */
-@media (min-width: 500px) { 
+@media (max-width: 500px) { 
 
     .navbar{
         position: relative;
