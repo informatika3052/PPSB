@@ -27,17 +27,6 @@ function heroGambarKecil() {
 }
 window.addEventListener('scroll', heroGambarKecil);
 
-// navbar
-
-
-// window.addEventListener('scroll', function () {
-//     header1.classList.toggle("sticky", window.screenY > 0);
-
-
-// });
-
-
-
 
 // on load
 
@@ -49,11 +38,6 @@ function codeAddress() {
 
 }
 window.onload = codeAddress;
-
-
-
-
-
 
 
 
@@ -69,28 +53,3 @@ scroll.addEventListener('click', function () {
         behavior: "smooth"
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
